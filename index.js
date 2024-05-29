@@ -1,9 +1,10 @@
 const fs = require('fs').promises;
+const { api } = require('./config.json')
 const request = require("request-promise");
 
 const ProxyGen = class {
     constructor() {
-        this.api = 'https://api.proxyscrape.com?request=displayproxies';
+        this.api = api;
         this.initialize();
     }
     async initialize() {
